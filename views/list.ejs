@@ -5,6 +5,10 @@
     <title>Is it the weekend</title>
   </head>
   <body>
-    <h1>it is a <%=kindOfDay%>!</h1>
+  <% if (kindOfDay=== "Wednesday"){ %>
+    <h1 style="color: purple">it is a <%=kindOfDay%> to do list</h1>
+  <% }else{ %>
+    <h1 style="color: blue">it is a <%=kindOfDay%> to do list</h1>
+  <%}%>
   </body>
 </html>
