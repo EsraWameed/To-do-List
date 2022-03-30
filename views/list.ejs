@@ -5,10 +5,16 @@
     <title>Is it the weekend</title>
   </head>
   <body>
-  <% if (kindOfDay=== "Wednesday"){ %>
-    <h1 style="color: purple">it is a <%=kindOfDay%> to do list</h1>
-  <% }else{ %>
-    <h1 style="color: blue">it is a <%=kindOfDay%> to do list</h1>
-  <%}%>
+<h1><%=kindOfDay%></h1>
+<form class="" action="/" method="post">
+<label for="toDo">To Do List Today:</label><br>
+<input type="text" name="newItem"><br>
+<input type="submit" value="Add">
+</form>
+<ul>
+<%for (var i=0; i<newListItems.length; i++){ %>
+  <li><%=newListItems[i]%></li>
+<%}%>
+</ul>
   </body>
 </html>
