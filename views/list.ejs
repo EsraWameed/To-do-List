@@ -3,18 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>Is it the weekend</title>
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
+<div class="box" id="heading">
 <h1><%=kindOfDay%></h1>
-<form class="" action="/" method="post">
-<label for="toDo">To Do List Today:</label><br>
-<input type="text" name="newItem"><br>
-<input type="submit" value="Add">
-</form>
-<ul>
+</div>
+
+<div class="box">
 <%for (var i=0; i<newListItems.length; i++){ %>
-  <li><%=newListItems[i]%></li>
+  <div class="item">
+    <input type="checkbox">
+    <p><%=newListItems[i]%></p></div>
 <%}%>
-</ul>
+
+<form class="item" action="/" method="post">
+<label for="toDo">To Do List Today:</label><br>
+<input type="text" name="newItem"placeholder="Add New Task"autocomplete="off"><br>
+<input type="submit" value="+">
+</form>
+
+</div>
+
+
+
   </body>
 </html>
